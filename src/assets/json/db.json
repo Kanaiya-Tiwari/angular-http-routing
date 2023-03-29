@@ -1,0 +1,56 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "product": [
+    {
+      "firstName": "pawansss",
+      "Descrption": "dddds",
+      "Quantity": "2",
+      "Price": 3334,
+      "id": 1
+    },
+    {
+      "firstName": "pawan",
+      "Descrption": "dddds",
+      "Quantity": "1",
+      "Price": 445566,
+      "id": 2
+    },
+    {
+      "firstName": "pawansee",
+      "Descrption": "dddds",
+      "Quantity": "3",
+      "Price": 333,
+      "id": 3
+    },
+    {
+      "firstName": "pawan",
+      "Descrption": "dddds",
+      "Quantity": "1",
+      "Price": 2222,
+      "id": 4
+    },
+    {
+      "firstName": "sddd",
+      "Descrption": "dddds",
+      "Quantity": "2",
+      "Price": 4444,
+      "id": 5
+    }
+  ]
+}

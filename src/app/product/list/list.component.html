@@ -1,0 +1,41 @@
+<nav class="navbar navbar-dark bg-dark d-flex flex-row-reverse">
+    <a class="btn btn-success"  routerLink="/product/add"> Product add</a>
+  </nav>
+  <div class="d-flex justify-content-center align-items-center flex-column overflow-auto "  style="margin-top: 50px;">
+    <table  class="table ">
+      <thead>
+        <tr class="table-dark">
+          <th  scope="col">ID</th>
+          <th  scope="col">Name</th>
+          <th scope="col">Descrption</th>
+          <th scope="col">Quanity</th>
+          <th scope="col">Price</th>
+          <th scope="col">EDIt</th>
+          <th scope="col">DELETE</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let value of dataValueOfApi  | paginate: { id: 'foo',
+        itemsPerPage: 10,
+        currentPage: page,
+        totalItems: totalRecord }">
+       
+          <th scope="row">{{value.id}}</th>
+          <th scope="row">{{value.firstName}}</th>
+          <td scope="row">{{value.Descrption}}</td>
+          
+          <td scope="row">{{value.Quantity}}</td>
+          <td scope="row">{{value.Price}}</td>
+         
+          <td scope="row"><button class="btn btn-danger" ><a routerLink="/product/edit/{{value.id}}" style="text-decoration: none; color: inherit;">EDIT</a></button></td>
+       
+          <td scope="row"><button class="btn btn-danger" (click)="delete(value.id,$event)">Delete</button></td>
+        </tr>
+       
+      </tbody>
+      
+    </table>
+    <div class="d-flex justify-content-center align-items-end w-100 ">
+      <pagination-controls  id="foo"   (pageChange)="page = $event"></pagination-controls>
+    </div>
+    </div>
